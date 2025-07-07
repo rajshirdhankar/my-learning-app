@@ -15,7 +15,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "red",
-        tabBarInactiveTintColor: "purple",
+        tabBarInactiveTintColor: "blue",
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
@@ -40,7 +40,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="details"
         options={{
-          title: "Details",
+          title: "details",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="chevron.right" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -50,6 +53,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="paperplane.fill" color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          headerShown: true,
+          tabBarItemStyle: { display: "none" },
         }}
       />
     </Tabs>
