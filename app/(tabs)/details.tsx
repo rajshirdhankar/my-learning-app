@@ -14,11 +14,11 @@ const details = () => {
       </View>
       <View style={{ marginTop: 20 }}>
         <Button
-          title="Go to aaryan"
+          title="Go to Raj"
           onPress={() =>
             router.push({
               pathname: "/person/[personName]",
-              params: { personName: "Aaryan" },
+              params: { personName: "Raj" },
             })
           }
         />
